@@ -1,0 +1,13 @@
+/PGD1/yaohuan/work_place/cytoplasma-circRNA
+
+ echo [`date +"%Y-%m-%d %H:%M:%S"`] "#> Estimate abundance for each sample (StringTie)"
+for ((i=0; i<=${#reads1[@]}-1; i++ )); do
+     sample="${reads1[$i]%%.*}"
+     dsample="${sample%%_*}"
+     sample="${sample%%_*}"
+     if [ ! -d ${BALLGOWNLOC}/${dsample} ]; then
+        mkdir -p ${BALLGOWNLOC}/${dsample}
+     fi
+     $STRINGTIE -e -B -p $NUMCPUS -G ${BALLGOWNLOC}/stringtie_merged.gtf \
+     -o ${BALLGOWNLOC}/${dsample}/${dsample}.gtf ${ALIGNLOC}/${sample}_accepted.bam
+ done

@@ -1,0 +1,2 @@
+"","t_id","chr","strand","start","end","t_name","num_exons","length","gene_id","gene_name","cov.YHN2KO-circRNA","FPKM.YHN2KO-circRNA","cov.YHN2KO-circRNA-goodcondition","FPKM.YHN2KO-circRNA-goodcondition","cov.YHN2KO-circRNA-hardcondition","FPKM.YHN2KO-circRNA-hardcondition","cov.YHWT-circRNA","FPKM.YHWT-circRNA","cov.YHWT-circRNA-2","FPKM.YHWT-circRNA-2"
+"1",1,"chr1","+",11869,14409,"ENST00000456328",3,1657,"MSTRG.9","DDX11L1",0,0,0,0,0.1207,0.067828,0,0,1.145444,0.398571

@@ -1,0 +1,59 @@
+#!/bin/bash
+# Parameter 1: File name
+# Parameter 2: Minimum score
+name=${1%.long.bed}
+
+grep -P "chr1\t" $1 > $name.chr1.txt
+grep -P "chr2\t" $1 > $name.chr2.txt
+grep -P "chr3\t" $1 > $name.chr3.txt
+grep -P "chr4\t" $1 > $name.chr4.txt
+grep -P "chr5\t" $1 > $name.chr5.txt
+grep -P "chr6\t" $1 > $name.chr6.txt
+grep -P "chr7\t" $1 > $name.chr7.txt
+grep -P "chr8\t" $1 > $name.chr8.txt
+grep -P "chr9\t" $1 > $name.chr9.txt
+grep -P "chr10\t" $1 > $name.chr10.txt
+grep -P "chr11\t" $1 > $name.chr11.txt
+grep -P "chr12\t" $1 > $name.chr12.txt
+grep -P "chr13\t" $1 > $name.chr13.txt
+grep -P "chr14\t" $1 > $name.chr14.txt
+grep -P "chr15\t" $1 > $name.chr15.txt
+grep -P "chr16\t" $1 > $name.chr16.txt
+grep -P "chr17\t" $1 > $name.chr17.txt
+grep -P "chr18\t" $1 > $name.chr18.txt
+grep -P "chr19\t" $1 > $name.chr19.txt
+grep -P "chr20\t" $1 > $name.chr20.txt
+grep -P "chr21\t" $1 > $name.chr21.txt
+grep -P "chr22\t" $1 > $name.chr22.txt
+grep -P "chrX\t" $1 > $name.chrX.txt
+grep -P "chrY\t" $1 > $name.chrY.txt
+
+perl /PGD1/ATAC-seq-script_bofeng/sam2bw/convert_bed2wig_wei.pl $1 $2 $3
+
+
+rm $name.chr1.txt
+rm $name.chr2.txt
+rm $name.chr3.txt
+rm $name.chr4.txt
+rm $name.chr5.txt
+rm $name.chr6.txt
+rm $name.chr7.txt
+rm $name.chr8.txt
+rm $name.chr9.txt
+rm $name.chr10.txt
+rm $name.chr11.txt
+rm $name.chr12.txt
+rm $name.chr13.txt
+rm $name.chr14.txt
+rm $name.chr15.txt
+rm $name.chr16.txt
+rm $name.chr17.txt
+rm $name.chr18.txt
+rm $name.chr19.txt
+rm $name.chr20.txt
+rm $name.chr21.txt
+rm $name.chr22.txt
+rm $name.chrX.txt
+rm $name.chrY.txt
+
+

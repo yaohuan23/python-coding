@@ -1,0 +1,58 @@
+Analyzed: 2cell-BS-rep1Vmm9.sam
+
+Summary:
+Analysis of Cs with minimum coverage of 10
+
+Total duplicate reads filtered: 0
+
+Total analyzed Cs on reference: 1613557
+Total analyzed methylated Cs (<= 100% C->T conversion) on reference:    1219500
+Total analyzed unconverted Cs from queries:     2220009
+Total analyzed unconverted Cs from mutation:    756921
+Total analyzed C to T conversion rate:  0.9697
+
+
+Summary over all Cs:
+
+Total Cs on reference covered by seq data:      2672005
+Total Cs from queries unconverted:      2258310
+Total C to T conversion rate estimated: 0.9710
+
+Result file: 2cell-BS-rep1-m5C.txt
+Starting to process: 33 targets on 100 CPUs ...
+
+processing 33 sequences: [chrY_random - 100.00%] [overall - 100.00%] done ...
+Done...
+
+
+Analyzed: Blasr-BS-rep2Vmm9.sam
+
+Summary:
+Analysis of Cs with minimum coverage of 10
+
+Total duplicate reads filtered:	0
+
+Total analyzed Cs on reference:	1832818
+Total analyzed methylated Cs (<= 100% C->T conversion) on reference:	1385913
+Total analyzed unconverted Cs from queries:	2723049
+Total analyzed unconverted Cs from mutation:	913128
+Total analyzed C to T conversion rate:	0.9658
+
+
+Summary over all Cs:
+
+Total Cs on reference covered by seq data:	2808960
+Total Cs from queries unconverted:	2771198
+Total C to T conversion rate estimated:	0.9672
+
+Result file: blast-rep2-m5C.txt
+
+N2KO-circRNA-goodcondition_circ.bam 7629819
+
+N2KO-circRNA-hardcondition_circ.bam 4882923
+
+WT-circRNA-2_circ.bam   6933870
+
+WT-circRNA_circ.bam 9848858
+
+N2KO-circRNA_circ.bam   7529960
