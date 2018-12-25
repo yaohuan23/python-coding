@@ -24,3 +24,5 @@ zcat /media/jiawei/yaohaun1/seq-fastq-data/20181217YH-singlecellBS/Project_20189
 CC.CCC.CCCC
 /media/jiawei/yaohaun1/seq-fastq-data/20181221YH/Project_single-cell-BST/Sample_single-BS-1To10ribPlus/single-BS-1To10ribPlus_CGATGT_pool_R1_001.fastq.gz
  nohup cutadapt -a CCC -a CCNCC --discard-trimmed -o scBS_R1_001_trim.fastq scBS_R1_001_qua.fastq &
+
+
