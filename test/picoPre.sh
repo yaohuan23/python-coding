@@ -26,3 +26,4 @@ CC.CCC.CCCC
  nohup cutadapt -a CCC -a CCNCC --discard-trimmed -o scBS_R1_001_trim.fastq scBS_R1_001_qua.fastq &
 
 
+/PGD2/yaohuan/script/meRanTK-1.2.1/meRanGh align -o meRanresult -f scBS-total-noindex-minC_final.fastq -t 110 -S scBS-total-noindex-minC_final_mm9.sam -ds -id $mm9meRanTK_index /PGD1/ref/yangxin_here/Mouse/mm9/mm9_genomefa/BSmm9 -GTF /PGD1/ref/yangxin_here/Mouse/mm9/mm9_genomefa/Mus_musculus.NCBIM37.67.gtf -mbp -fmo -mmr 0.01 2>&1 > /dev/null
