@@ -11,3 +11,4 @@ for ((i=0; i<=${#reads1[@]}-1; i++ )); do
      $STRINGTIE -e -B -p $NUMCPUS -G ${BALLGOWNLOC}/stringtie_merged.gtf \
      -o ${BALLGOWNLOC}/${dsample}/${dsample}.gtf ${ALIGNLOC}/${sample}_accepted.bam
  done
+/PGD2/yaohuan/script/meRanTK-1.2.1/meRanAnnotate -b tempbed.bed -g /PGD1/ref/yangxin_here/Human/hg19/encodeGene/gencode.v29lift37.annotation.gtf -gtf  -f 'intron|CDS|UTR' 2>&1 >run.log
