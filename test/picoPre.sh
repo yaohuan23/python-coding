@@ -27,3 +27,19 @@ CC.CCC.CCCC
 
 
 /PGD2/yaohuan/script/meRanTK-1.2.1/meRanGh align -o meRanresult -f scBS-total-noindex-minC_final.fastq -t 110 -S scBS-total-noindex-minC_final_mm9.sam -ds -id $mm9meRanTK_index /PGD1/ref/yangxin_here/Mouse/mm9/mm9_genomefa/BSmm9 -GTF /PGD1/ref/yangxin_here/Mouse/mm9/mm9_genomefa/Mus_musculus.NCBIM37.67.gtf -mbp -fmo -mmr 0.01 2>&1 > /dev/null
+
+awk 'BEGIN{OFS="\t"}{print "m5CSite"FNR,$1}' all.fa >temp
+mv temp all.fa
+sed -i 's/^/@/g' all.fa
+cat /media/jiawei/yaohaun1/seq-fastq-data/20181126YH-singlecellBS-T/Project_2018930/Sample_scBS-rep2/scBS-rep2_GATGT_L006_R1_001.fastq.gz /media/jiawei/yaohaun1/seq-fastq-data/20181228YH/Project_single-cell-BST/Sample_scBSrep2_1-12/scBSrep2_1-12_CGATGT_pool_R1_001.fastq.gz /media/jiawei/yaohaun1/seq-fastq-data/20181116YH/Project_2018930/Sample_scBS-rep2/scBS-rep2_GATG_pool_R1_001.fastq.gz
+sed -i 's/^/@/g' temp${sample}.reads
+ 66 sed -i 's/\t/\n/g' temp${sample}.reads
+ 67 awk '{if(NR%2==0){print $0"\n+\n"gensub(/[ATGC]/,"I","g")}else{print $0}}' temp${sample}.reads >${sample}sites.fastq
+$STRINGTIE -p $NUMCPUS  -o ${ALIGNLOC}/${sample}.gtf \
+113    -l ${sample} ${ALIGNLOC}/${sample}.bam
+ cat ${sample}1A-BS.txt|awk -v OFS="\t" '{if($12=="M")print $1,$2,$2,$3,$6,$5,$7,$12}' >${sample}_methyC.bed
+ 73 cat ${sample}_methyC.bed|awk -v OFS="\t" '$7>=0.1 && $6>=10 && $5>=1' > ${sample}-methyC_qua.bed
+
+bedtools genomecov -split  -ibam SRR5183491_sorted.bam -g
+
+ sed -i  '/^GL/d' siNSUN2-mRNA-T-for-circ.gtf
